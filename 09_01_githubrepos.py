@@ -14,9 +14,12 @@ def repos_list(input_data):
     jdata = json.loads(resp.text)
     result = {}
     for record in jdata:
-        proj_name = record['full_name'].split('/')[1]
-        proj_desc = record['description']
-        result[proj_name] = proj_desc
+        if 'full_name' in record:
+            proj_name = record['full_name'].split('/')[1]
+            proj_desc = record['description']
+            result[proj_name] = proj_desc
+        else:
+            pass
     return result
 
 
@@ -30,10 +33,14 @@ def solve(username):
 # Main app
 def main():
     username = sys.argv[1]
-    print('Listing all projects of %s:', username)
-    for order, (name, desc) in enumerate(solve(username).items(), 1):
-        print('Project {}: {} - {}'.format(order, name, desc))
-    print('-------------------\nTotal projects: ', order)
+    result = solve(username)
+    if result:
+        print('Listing all projects of %s:', username)
+        for order, (name, desc) in enumerate(result.items(), 1):
+            print('Project {}: {} - {}'.format(order, name, desc))
+        print('-------------------\nTotal projects: ', order)
+    else:
+        print("The username is not exist or there is not any repos")
 
 
 if __name__ == "__main__":
