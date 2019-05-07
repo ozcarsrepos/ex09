@@ -5,6 +5,7 @@ import json
 import logging  # NOQA
 import sys
 logger = logging.getLogger(__name__)    # NOQA
+logger.setLevel(logging.DEBUG)  # NOQA
 
 
 # Get all the repos from the input data
