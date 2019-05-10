@@ -29,7 +29,7 @@ def feature(obj):
 
 # Get result from googlemaps with num & locate, default locate = 'DHGTVT',
 # default radius = 2000 meters, keyword is optional in command line
-def geo_result(num=20, **locate):
+def geo_result(num=50, **locate):
     locate.setdefault("location", "10.8048982,106.7170081")
     # format of Googlemap API ('location': [lat, lon])
     locate.setdefault("radius", "2000")
