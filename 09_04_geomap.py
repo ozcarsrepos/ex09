@@ -16,21 +16,24 @@ logger.setLevel(logging.DEBUG)  # NOQA
 def feature(obj):
     result = {"type": "Feature"}
     result["geometry"] = {"type": "Point"}
-    result["geometry"]["coordinates"] = [obj['geometry']['location']['lat'],
-                                         obj['geometry']['location']['lng']]
+    result["geometry"]["coordinates"] = [
+        float(obj['geometry']['location']['lng']),
+        float(obj['geometry']['location']['lat'])]
+    # format of GeoJSON ('coordinates': [lng, lat])
     result["properties"] = dict()
     result["properties"]["name"] = obj['name']
     result["properties"]["Address"] = obj['vicinity']
-    result["rating"] = obj['rating']
+    result["properties"]["rating"] = obj['rating']
     return result
 
 
 # Get result from googlemaps with num & locate, default locate = 'DHGTVT',
 # default radius = 2000 meters, keyword is optional in command line
-def geo_result(num=50, **locate):
-    '''locate.setdefault("location", "10.8048982,106.7170081")
+def geo_result(num=20, **locate):
+    locate.setdefault("location", "10.8048982,106.7170081")
+    # format of Googlemap API ('location': [lat, lon])
     locate.setdefault("radius", "2000")
-    locate.setdefault("type", "restaurant")'''
+    locate.setdefault("type", "restaurant")
     locate.setdefault("key", "AIzaSyCLYmd6U1YQhHPDJn9jL8ihulOc4yUmuzg")
 
     googlemaps_api_url = (
@@ -39,12 +42,23 @@ def geo_result(num=50, **locate):
     req = ses.get(googlemaps_api_url, params=locate)
     resp = req.json()
     # Establishing GeoJSON data
-    geo_data = {"type": "FeatureCollection", "features": []}
+    geo_data = {"type": "FeatureCollection", "features": [
+        {"type": "Feature",
+         "geometry": {"type": "Point",
+                      "coordinates": [106.7170081, 10.8048982]},
+         "properties": {
+            "marker-color": "#dc4e4c",
+            "marker-size": "medium",
+            "marker-symbol": "star",
+            "name": "You are here!",
+            "Address": "Trường Đại học Giao thông Vận tải TP.HCM"
+            }}
+        ]}
     n = min(num, 20)    # each result page (pagesize) has 20 records
     for rs in resp['results'][:n]:
         geo_data["features"].append(feature(rs))
     num -= 20
-    while num > 0:
+    while num > 0 and len(geo_data["features"]) > 1:
         time.sleep(2)
         locate_next = dict()
         locate_next['pagetoken'] = resp['next_page_token']
@@ -55,6 +69,9 @@ def geo_result(num=50, **locate):
         for rs in resp['results'][:n]:
             geo_data["features"].append(feature(rs))
         num -= 20
+    else:
+        logger.debug('Get enough data or over your daily quotas to '
+                     'access to Googlemaps API')
 
     return geo_data
 
@@ -81,12 +98,12 @@ def main():
             parser.add_argument('--radius_map', '-r', default=2000, type=int,
                                 dest='mapradius', help='input the radius of '
                                 'your searching (default is 2000 m)')
-            args = parser.parse_args()
+            args = parser.parse_known_args()
             locate = dict()
-            locate["location"] = [args.lat, args.lng]
-            locate["type"] = args.maptype
-            locate["radius"] = args.mapradius
-            geojson_data = geo_result(args.num, locate)
+            locate["location"] = [args[0].lat, args[0].lng]
+            locate["type"] = args[0].maptype
+            locate["radius"] = args[0].mapradius
+            geojson_data = geo_result(args[0].num, locate)
         except Exception as e:
             logger.debug('Appear exception:', e)
 
