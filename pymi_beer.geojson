@@ -317,6 +317,306 @@
         "Address": "528 X\u00f4 Vi\u1ebft Ngh\u1ec7 T\u0129nh, Ph\u01b0\u1eddng 25, B\u00ecnh Th\u1ea1nh",
         "rating": 3.9
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7201384,
+          10.8169202
+        ]
+      },
+      "properties": {
+        "name": "KFC",
+        "Address": "79 \u0110\u01b0\u1eddng B\u00ecnh Qu\u1edbi, Ph\u01b0\u1eddng 27, B\u00ecnh Th\u1ea1nh",
+        "rating": 3.9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7178266,
+          10.8122356
+        ]
+      },
+      "properties": {
+        "name": "L\u1ea9u C\u00e1 Thanh \u0110a",
+        "Address": "860/75/1 X\u00f4 Vi\u1ebft Ngh\u1ec7 T\u0129nh, Ph\u01b0\u1eddng 25, B\u00ecnh Th\u1ea1nh",
+        "rating": 3.9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7149257,
+          10.8095954
+        ]
+      },
+      "properties": {
+        "name": "quan bun bo hue",
+        "Address": "31 Ung V\u0103n Khi\u00eam, Ph\u01b0\u1eddng 25, B\u00ecnh Th\u1ea1nh",
+        "rating": 3.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7115139,
+          10.8023502
+        ]
+      },
+      "properties": {
+        "name": "Ti\u1ec7m V\u1ecbt Heo Quay Ph\u00e1t T\u00e0i",
+        "Address": "288 X\u00f4 Vi\u1ebft Ngh\u1ec7 T\u0129nh, B\u00ecnh Th\u1ea1nh",
+        "rating": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7205798,
+          10.8058858
+        ]
+      },
+      "properties": {
+        "name": "C\u00f4ng Ty Tnhh Th\u01b0\u01a1ng M\u1ea1i T\u00e2n B\u1ea1ch D\u01b0\u01a1ng",
+        "Address": "188 Ung V\u0103n Khi\u00eam, Ph\u01b0\u1eddng 25, B\u00ecnh Th\u1ea1nh",
+        "rating": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7152426,
+          10.8082061
+        ]
+      },
+      "properties": {
+        "name": "L\u1ea9u D\u00ea T\u00e0i K\u00fd Restaurant",
+        "Address": "57A Ung V\u0103n Khi\u00eam, Ph\u01b0\u1eddng 25, B\u00ecnh Th\u1ea1nh",
+        "rating": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7163581,
+          10.8061757
+        ]
+      },
+      "properties": {
+        "name": "Nga b\u00e1nh kh\u1ecdt- \u0110\u1eb7c s\u1ea3n V\u0169ng T\u00e0u",
+        "Address": "Ph\u01b0\u1eddng 25, B\u00ecnh Th\u1ea1nh",
+        "rating": 3.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7093575,
+          10.8092664
+        ]
+      },
+      "properties": {
+        "name": "Qu\u00e1n Ch\u00e1o L\u01b0\u01a1n O L\u00e0i",
+        "Address": "95 \u0110\u01b0\u1eddng D2, B\u00ecnh Th\u1ea1nh",
+        "rating": 4.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7103746,
+          10.8103923
+        ]
+      },
+      "properties": {
+        "name": "\u1ed0c Tr\u00e1ng",
+        "Address": "67 Chu V\u0103n An, B\u00ecnh Th\u1ea1nh",
+        "rating": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7204565,
+          10.8036306
+        ]
+      },
+      "properties": {
+        "name": "Ti\u1ec7m C\u01a1m Chay H\u1ea3i \u0110\u0103ng",
+        "Address": "131, \u0110\u01b0\u1eddng D1, Ph\u01b0\u1eddng 25, Q.B\u00ecnh Th\u1ea1nh, TPHCM",
+        "rating": 4.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.707412,
+          10.806177
+        ]
+      },
+      "properties": {
+        "name": "c\u00f4ng ty TNHH TM - DV CHI VINH",
+        "Address": "124 \u0110\u01b0\u1eddng D1, Ph\u01b0\u1eddng 24, B\u00ecnh Th\u1ea1nh",
+        "rating": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7158052,
+          10.8038282
+        ]
+      },
+      "properties": {
+        "name": "L\u01b0\u01a1n \u0111\u1ed3ng x\u1ee9 ngh\u1ec7 O L\u00e0i",
+        "Address": "95 \u0110\u01b0\u1eddng Nguy\u1ec5n Gia Tr\u00ed, Ph\u01b0\u1eddng 25, B\u00ecnh Th\u1ea1nh",
+        "rating": 4.3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7154615,
+          10.8054761
+        ]
+      },
+      "properties": {
+        "name": "Qu\u00e1n \u0102n V\u1eb7t H\u00e0 N\u1ed9i Ph\u1ed1",
+        "Address": "157 \u0110\u01b0\u1eddng Nguy\u1ec5n Gia Tr\u00ed, Ph\u01b0\u1eddng 25, B\u00ecnh Th\u1ea1nh",
+        "rating": 4.7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7155859,
+          10.8059244
+        ]
+      },
+      "properties": {
+        "name": "B\u00fan ch\u1ea3 H\u00e0 N\u1ed9i - H\u1ed3ng H\u1ea1nh 104 D5",
+        "Address": "104 \u0110\u01b0\u1eddng D5, Ph\u01b0\u1eddng 25, B\u00ecnh Th\u1ea1nh",
+        "rating": 3.9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7160248,
+          10.8065712
+        ]
+      },
+      "properties": {
+        "name": "Texas Chicken - D2,B\u00ecnh Th\u1ea1nh",
+        "Address": "203 \u0110\u01b0\u1eddng Nguy\u1ec5n Gia Tr\u00ed, Ph\u01b0\u1eddng 25, B\u00ecnh Th\u1ea1nh",
+        "rating": 4.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7153353,
+          10.8060486
+        ]
+      },
+      "properties": {
+        "name": "C\u01a0M G\u00c0 PH\u00da Y\u00caN - 3 CON G\u00c0",
+        "Address": "81-83 \u0110\u01b0\u1eddng D5, Ph\u01b0\u1eddng 25, B\u00ecnh Th\u1ea1nh",
+        "rating": 3.9
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7159289,
+          10.8032091
+        ]
+      },
+      "properties": {
+        "name": "Qu\u00e1n Kim Thoa - H\u1ed9t V\u1ecbt L\u1ed9n",
+        "Address": "10 \u0110\u01b0\u1eddng Nguy\u1ec5n Gia Tr\u00ed, Ph\u01b0\u1eddng 25, B\u00ecnh Th\u1ea1nh",
+        "rating": 3
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7156725,
+          10.8032118
+        ]
+      },
+      "properties": {
+        "name": "Popeyes D2",
+        "Address": "67-69 \u0110\u01b0\u1eddng Nguy\u1ec5n Gia Tr\u00ed, Ph\u01b0\u1eddng 25, B\u00ecnh Th\u1ea1nh",
+        "rating": 4.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.7161777,
+          10.802931
+        ]
+      },
+      "properties": {
+        "name": "Qua\u0301n Pong",
+        "Address": "36/33 \u0110\u01b0\u1eddng Nguy\u1ec5n Gia Tr\u00ed, Ph\u01b0\u1eddng 25, B\u00ecnh Th\u1ea1nh",
+        "rating": 4.2
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.714961,
+          10.803446
+        ]
+      },
+      "properties": {
+        "name": "nem n\u01b0\u1edbng b\u00e1nh cu\u1ed1n d2",
+        "Address": "13 D2 H\u1ebbm 69 Nguy\u1ec5n Gia Tr\u00ed, Ph\u01b0\u1eddng 25, B\u00ecnh Th\u1ea1nh",
+        "rating": 3.9
+      }
     }
   ]
 }
