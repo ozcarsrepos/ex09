@@ -12,3 +12,7 @@ Mini Project 02: Script checking if win lô-prize from ketqua.net
 Mini Project 03: Listing top N questions with LABEL in StackOverflow
 - usage: python/python3 09_03_so.py N LABEL
 - note: need install package "py-stackexchange" first
+
+Mini Project 04: Listing N places nearby a location (default is 50 restaurants near DH GTVT Binh Thanh) from Googlemaps
+- usage: python/python3 09_04_geomap.py
+- note: need install package "geojsonio" to display map on geojson.io
