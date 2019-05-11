@@ -80,7 +80,7 @@ def geo_result(num=50, **locate):
         num -= 20
     else:
         logger.debug('Get enough data or over your daily quotas for '
-                     'accessing to Googlemaps API')
+                     'accessing to Google maps API')
 
     return geo_data
 
