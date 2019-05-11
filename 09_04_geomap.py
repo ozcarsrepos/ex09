@@ -79,8 +79,8 @@ def geo_result(num=50, **locate):
             geo_data["features"].append(feature(rs))
         num -= 20
     else:
-        logger.debug('Get enough data or over your daily quotas to '
-                     'access to Googlemaps API')
+        logger.debug('Get enough data or over your daily quotas for '
+                     'accessing to Googlemaps API')
 
     return geo_data
 
