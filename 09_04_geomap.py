@@ -7,6 +7,7 @@ import requests
 import json
 import time
 from geojsonio import display
+from geocoder import ip
 # logger = log.get_logger(__name__)
 logger = logging.getLogger(__name__)    # NOQA
 logger.setLevel(logging.DEBUG)  # NOQA
@@ -45,15 +46,23 @@ def geo_result(num=50, **locate):
     geo_data = {"type": "FeatureCollection", "features": [
         {"type": "Feature",
          "geometry": {"type": "Point",
-                      "coordinates": [106.7170081, 10.8048982]},
+                      "coordinates": []},
          "properties": {
             "marker-color": "#dc4e4c",
             "marker-size": "medium",
             "marker-symbol": "star",
-            "name": "You are here!",
-            "Address": "Trường Đại học Giao thông Vận tải TP.HCM"
+            "name": "Your location here!",
             }}
         ]}
+
+    if locate["location"] == "10.8048982,106.7170081":
+        geo_data["features"][0]["geometry"]["coordinates"] = [106.7170081,
+                                                              10.8048982]
+        geo_data["features"][0]["properties"]["Address"] = (
+            "Trường Đại học Giao thông Vận tải TP.HCM")
+    else:
+        geo_data["features"][0]["geometry"]["coordinates"] = (
+            float(i) for i in locate["location"].split(',')[::-1])
     n = min(num, 20)    # each result page (pagesize) has 20 records
     for rs in resp['results'][:n]:
         geo_data["features"].append(feature(rs))
@@ -85,9 +94,9 @@ def main():
                 'display a type (default is restaurants) map in radius '
                 '(default is 2000 m) of a location (default is Dai hoc '
                 'giao thong van tai - duong Vo Oanh, Q. Binh Thanh)'))
-            parser.add_argument('--lat', '-l', default=10.8048982, type=float,
+            parser.add_argument('--lat', '-l', default="10.8048982",
                                 help='input the latitude of your location')
-            parser.add_argument('--lng', '-g', default=106.7170081, type=float,
+            parser.add_argument('--lng', '-g', default="106.7170081",
                                 help='input the longtitude of your location')
             parser.add_argument('--type', '-t', default='restaurant',
                                 dest='maptype', help='type of your map default'
@@ -95,12 +104,17 @@ def main():
             parser.add_argument('--numpage', '-n', default=50, type=int,
                                 dest='num', help='input the pagesize, '
                                 'default is 50')
-            parser.add_argument('--radius_map', '-r', default=2000, type=int,
+            parser.add_argument('--radius_map', '-r', default="2000",
                                 dest='mapradius', help='input the radius of '
                                 'your searching (default is 2000 m)')
             args = parser.parse_known_args()
             locate = dict()
-            locate["location"] = [args[0].lat, args[0].lng]
+            if args[0].lat == 'me':
+                position = ip(args.lat)
+                locate["location"] = '.'.join(str(i) for i in position.latlng)
+            else:
+                locate["location"] = (','
+                                      .join([args[0].lat, args[0].lng]))
             locate["type"] = args[0].maptype
             locate["radius"] = args[0].mapradius
             geojson_data = geo_result(args[0].num, locate)
