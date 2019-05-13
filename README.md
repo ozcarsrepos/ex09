@@ -15,4 +15,4 @@ Mini Project 03: Listing top N questions with LABEL in StackOverflow
 
 Mini Project 04: Listing N places nearby a location (default is 50 restaurants near DH GTVT Binh Thanh) from Googlemaps
 - usage: python/python3 09_04_geomap.py -l LAT -g LNG -t TYPE -n NUMBER -r RADIUS
-- note: need install package "geojsonio" to display map on geojson.io
+- note: need install package "geojsonio" and "geocoder" to display map on geojson.io and get the position via ip address
